@@ -1,0 +1,14 @@
+{
+  "name": "johnduarte-beaker_101",
+  "version": "0.1.0",
+  "author": "johnduarte",
+  "summary": "Module to install simple beaker tutorial for testing puppet",
+  "license": "Apache-2.0",
+  "source": "https://github.com/johnduarte/puppet-beaker_101",
+  "project_page": "https://github.com/johnduarte/puppet-beaker_101",
+  "issues_url": "https://github.com/johnduarte/puppet-beaker_101/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
