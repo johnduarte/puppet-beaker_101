@@ -29,6 +29,11 @@ class beaker_101 {
     ensure => 'directory',
   }
 
+  file { '/tmp/beaker_101/Gemfile':
+    ensure  => present,
+    source  => 'puppet:///modules/beaker_101/Gemfile',
+    require => File['/tmp/beaker_101'],
+  }
   file { '/tmp/beaker_101/vmpooler.cfg':
     ensure  => present,
     source  => 'puppet:///modules/beaker_101/vmpooler.cfg',
