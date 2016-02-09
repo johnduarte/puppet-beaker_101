@@ -21,6 +21,10 @@
 #
 class beaker_101 {
 
+  File {
+    mode   => '0666',
+  }
+
   file { '/tmp/beaker_101':
     ensure => 'directory',
   }
@@ -28,6 +32,11 @@ class beaker_101 {
   file { '/tmp/beaker_101/vmpooler.cfg':
     ensure  => present,
     source  => 'puppet:///modules/beaker_101/vmpooler.cfg',
+    require => File['/tmp/beaker_101'],
+  }
+  file { '/tmp/beaker_101/vmpooler_split.cfg':
+    ensure  => present,
+    source  => 'puppet:///modules/beaker_101/vmpooler_split.cfg',
     require => File['/tmp/beaker_101'],
   }
   file { '/tmp/beaker_101/install_foss.rb':
